@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='UTF-8' lang='ru'>
+<meta name='viewport' content='initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=with-device-width'>
+<link rel=stylesheet href=gen.css>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script> 
+<title>Генератор паролей</title>
+</head>
+<body>
+<h1>Генератор паролей</h1>
+<a id=showSettings onclick=$(".settings").fadeIn(500);$("#showSettings").hide(0);>Показать</a> 
+<div class=settings>
+<h1>Настройки</h1>
+<h3>Цифры</h3>
+<div class="toggle-button">
+                <input id="isNumOn" type="checkbox">
+                <label for="isNumOn"></label>
+                <div class="toggle-button__icon"></div>
+</div> 
+<h3>Символы</h3>
+<div class="toggle-button">
+                <input id="isCharOn" type="checkbox">
+                <label for="isCharOn"></label>
+                <div class="toggle-button__icon"></div>
+</div>
+<h3>Длина пароля: <input type=text placeholder=16 id=countChars maxlength=2></h3>
+<br><br>
+<a onclick=$(".settings").fadeOut(500);$("#showSettings").slideDown(100);>Скрыть</a> 
+<br><br>
+</div><br><br>
+<a onclick=genPass()>Сгенерировать</a><br><br> 
+<text id=passOut></text>
+<div class="loader-container arc-rotate-double">
+			<div class="loader">
+				<div class="arc-1"></div>
+				<div class="arc-2"></div>
+			</div>
+</div>
+<script src=gen.js></script>
+</body>
+</html>
